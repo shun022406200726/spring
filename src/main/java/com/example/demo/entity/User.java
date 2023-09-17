@@ -1,39 +1,46 @@
 package com.example.demo.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import java.util.Date;
 import lombok.Data;
 
-@Entity
+/**
+ * ユーザー情報 Entity
+ */
 @Data
-@Table(name = "user")
 public class User {
 
-  @Id
-  @Column(name = "id")
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  /**
+   * ID
+   */
   private Long id;
 
-  @Column(name = "name")
+  /**
+   * 名前
+   */
   private String name;
 
-  @Column(name = "address")
+  /**
+   * 住所
+   */
   private String address;
 
-  @Column(name = "phone")
+  /**
+   * 電話番号
+   */
   private String phone;
 
-  @Column(name = "update_date")
+  /**
+   * 更新日時
+   */
   private Date updateDate;
 
-  @Column(name = "create_date")
+  /**
+   * 登録日時
+   */
   private Date createDate;
 
-  @Column(name = "delete_date")
+  /**
+   * 削除日時
+   */
   private Date deleteDate;
 }
